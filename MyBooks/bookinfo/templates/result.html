@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result</title>
+        <style>
+            * {
+                    text-align: center;
+            }
+            body {
+                background-color: #F2E9B8;
+            }
+         </style>
+    </head>
+
+    <body>
+        <h1>{{title}}</h1>
+        <h2>{{author}}</h2>
+        <img src="{{cover}}" alt="cover.jpg">
+        <h3>ISBN:{{ISBN}}</h2>
+
+        <form action="/bookinfo/search/find/create" method="post">
+            {% csrf_token %}
+            <input id="ISBN" type="hidden" name="author" value = "{{author}}">
+            <input id="ISBN" type="hidden" name="title" value = "{{title}}">
+            <input id="ISBN" type="hidden" name="ISBN" value = "{{ISBN}}">
+            <input id="ISBN" type="hidden" name="cover" value = "{{cover}}">
+            <label for="ISBN">Enter a comment</label>
+            <input id="ISBN" type="text" name="comment">
+        </form>
+
+    </body>
+</html>

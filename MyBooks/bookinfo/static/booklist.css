@@ -1,0 +1,25 @@
+.grid {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr 1fr 1fr  30px;
+    grid-template-rows: 200px 100px 100px 100px;
+    grid-gap: 10px;
+}
+
+body {
+    background-color: #F2E9B8;
+}
+
+.bookcard {
+    grid-template-columns: 3;
+    background-color: #D8C8A3;
+}
+
+img {
+    grid-column-start: 3;
+}
+
+.comment {
+    background-color: #D8C8A3;
+    text-align: center;
+    max-width: 500px;
+}

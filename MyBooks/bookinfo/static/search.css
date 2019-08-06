@@ -1,0 +1,30 @@
+.grid {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr 1fr 1fr 1fr 30px;
+    grid-template-rows: 200px 100px 100px 50px;
+}
+
+body {
+    background-color: #F2E9B8;
+}
+
+h1 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+
+.middle {
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+img {
+    grid-column-start: 4;
+    height: 150px;
+}
+
+.addbutton {
+    grid-column-start: 4;
+    grid-row-start: 4
+}

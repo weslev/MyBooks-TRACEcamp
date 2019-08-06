@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Search for a book by ISBN</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'search.css' %}">
+    </head>
+
+    <body>
+        <div class = "grid">
+            <h1 style="text-align: center">Find your book!</h3>
+            <form action="./find" method='get' class = "middle">
+                <label for="ISBN">Enter book's ISBN</label>
+                <input id="ISBN" type="text" name="ISBN">
+            </form>
+            <button class = "addbutton"><a href="/bookinfo/list">See your list</a></button>
+        </div>
+
+       
+    </body>
+
+</html>

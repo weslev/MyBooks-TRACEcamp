@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your books!</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'booklist.css' %}">
+        <style>
+            * {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+            <button><a href="/bookinfo/search">Search for a new book</a></button>
+            {% for book in books %}
+            <div>
+                <h1 class = "bookcard">{{book.title}}</h1>
+                <h2 class = "bookcard">{{book.author}}</h2>
+                <img src="{{book.cover}}" alt="book.jpg" class = "bookcard">
+                <h3>ISBN:{{book.ISBN}} </h3>
+                <p class = "bookcard">{{book.comment}}</p>
+            </div>
+            {% endfor %}
+    </body>
+</html>
